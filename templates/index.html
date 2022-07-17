@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Hi</h1>
+
+
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th scope="col">Number</th>
+            <th scope="col">number of lesson</th>
+            <th scope="col">finnish</th>
+            <th scope="col">russian</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for word in words %}
+            <tr class="table-primary">
+                <td>{{ word.id }}</td>
+                <td>{{ word.lesson_id }}</td>
+                <td>{{ word.finnish }}</td>
+                <td>{{ word.russian }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

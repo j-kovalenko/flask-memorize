@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Тест</h1>
+<h4>Пришло время протестировать свои знания. Напишите перевод в поле ввода. Удачи &#127808;</h4>
+<form class="words-form" method="post">
+    {% set count = 1 %}
+    <ol class="learn-words list-group list-group-numbered">
+        {% for phrase in rus_phrases %}
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                {% set name = "phrase" + loop.index | string() %}
+                <div class="form-group ms-2 me-auto">
+                    <div class="fw-bold">{{ phrase }}</div>
+                    <input type="text" class="form-control" id={{name}} name={{name}} placeholder="write a translation">
+                </div>
+            </li>
+        {% endfor %}
+    </ol>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

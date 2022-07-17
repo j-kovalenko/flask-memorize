@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th scope="col">russian</th>
+            <th scope="col">your answer</th>
+            <th scope="col">finnish</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for word in ress %}
+            <tr>
+                <td>{{ rus_phrases[loop.index-1] }}</td>
+                {% if word == answs[loop.index-1] %}
+                    <td class="table-success">{{ word }}</td>
+                {% else %}
+                    <td class="table-danger">{{ word }}</td>
+                {% endif %}
+                <td>{{ answs[loop.index-1] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

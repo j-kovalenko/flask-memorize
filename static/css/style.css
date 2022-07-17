@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.learn-words {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+footer {
+	background-color: #15202B;
+	text-align: center;
+	padding-top: 30px;
+	color: #FFFFFF;
+	padding-bottom: 20px;
+	margin-top: auto;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}

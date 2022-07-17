@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content%}
+
+<h1>Добавить слово</h1>
+<form class="add-form" method="post">
+    <div class="form-group">
+        <label for="lesson">Номер урока</label>
+        <input type="number" class="form-control" id="lesson" name="lesson" placeholder="write a number">
+    </div>
+    <div class="form-group">
+        <label for="finnish">Фраза или слово на финском</label>
+        <input type="text" class="form-control" id="finnish" name="finnish" placeholder="write a phrase or text">
+    </div>
+    <div class="form-group">
+        <label for="russian">Напишите перевод</label>
+        <input type="text" class="form-control" id="russian" name="russian" placeholder="write a translation">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

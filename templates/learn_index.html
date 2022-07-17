@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Уроки:</h2>
+<ul class="list-group list-group-flush">
+    {% for i in range(1, num + 1) %}
+        {% set link = "/learn/" + i | string() %}
+        <li class="list-group-item">
+            <a href={{link}} class="link-primary">Урок {{ i }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
